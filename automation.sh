@@ -50,5 +50,5 @@ if [[ -f ${docroot}/inventory.html ]];then
 fi
 #cronjob
 if [[ ! -f /etc/cron.d/automation ]];then
-	echo "* * * * * root /root/automation.sh" >> /etc/cron.d/automation
+	echo "* * * * * root /root/Automation_Project/automation.sh" >> /etc/cron.d/automation
 fi	
