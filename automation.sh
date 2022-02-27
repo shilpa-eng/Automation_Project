@@ -44,20 +44,19 @@ if [[ ! -f ${docroot}/inventory.html ]]; then
 fi
 
 #inserting logs into the file
-<<<<<<< HEAD
+
 if [[ -f ${docroot}/inventory.html ]];then
 	size=$(du -h /tmp/${name}-httpd-logs-${timestamp}.tar | awk '{print $1}')
 	echo -e "httpd-logs\t-\t${timestamp}\t-\ttar\t-\t${size}" >>${docroot}/inventory.html
 fi
 #cronjob in perticular path of the script
 if [[ ! -f /etc/cron.d/automation ]];then
-=======
+
 if [[ -f ${docroot}/inventory.html ]]; then
 	size=$(du -h /tmp/${name}-httpd-logs-${timestamp}.tar | awk '{print $1}')
 	echo -e "httpd-logs\t-\t${timestamp}\t-\ttar\t-\t${size}" >>${docroot}/inventory.html
 fi
 #cronjob
 if [[ ! -f /etc/cron.d/automation ]]; then
->>>>>>> main
 	echo "* * * * * root /root/Automation_Project/automation.sh" >> /etc/cron.d/automation
 fi	
